@@ -2,64 +2,76 @@
 *{
   padding: 0;
   margin: 0;box-sizing: border-box;
+  font-family: sans-serif;
+}
+i{
+  color: grey;
+}
+h1{
+  font-size: 16px;
+}
+p{
+  font-size: 12px;
+  color: lightgrey;
 }
 .high-bar{
   height: 20vh;
   width: 100%;
   background-color: blue;
+  position: absolute;
+  z-index: 0;
+}
+.low_bar{
+  background-color: lightgrey;
+  height: 100vh;
 }
 #app{
   width: 80%;
   height: 90vh;
   margin-left: 10%;
   margin-top: 5vh;
-  border: 1px solid red;
-  position: absolute;
   display: flex;
+  z-index: 1;
 }
 .left{
   width: 35%;
-  border: 1px solid red;
   background-color: white;
 }
 .right{
   width: 65%;
-  border: 1px solid red;
 }
 header{
-  border: 1px solid red;
   height: 10%;
   display: flex;
   background-color: lightgrey;
+  border-right: 1px solid grey;
 }
 .foto{
-  border: 1px solid red;
   width: 60%;
   height: 100%;
   display: flex;
   justify-content: flex-start;
 }
 .impostazioni{
-  border: 1px solid red;
   width: 40%;
   display: flex;
   justify-content: flex-end;
 }
 .foto img{
-  width: 30%;
-  height: 100%;
+  width: 25%;
+  height: 90%;
+  border-radius: 100%;
+  margin: 3px 10px;
 }
 .foto h1{
-  font-size: 18px;
   display: flex;
   align-items: center;
 }
 .impostazioni i{
-  color: black;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding: 5px;
+  padding-right: 15px;
 }
 .notifiche{
   display: flex;
@@ -80,21 +92,20 @@ header{
   border-radius: 100%;
   background-color: white;
 }
-.notifiche h1{
-  font-size: 16px;
-}
+
 .notifiche a{
-  font-size: 14px;
+  font-size: 12px;
   color: blue;
 }
 .search{
   display: flex;
   height: 8%;
 }
-.search h1{
-  font-size: 13px;
+.search h2{
   color: grey;
   margin-left: 20px;
+  font-weight: 200;
+  font-size: 12px;
 }
 .search_box{
   border: 1px solid lightgrey;
@@ -109,4 +120,114 @@ header{
 }
 .search i{
   margin-left: 10px;
+}
+.chat{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-y: auto;
+  transition: all;
+}
+.chat :hover{
+  background-color: lightgrey;
+  opacity: 0.9;
+}
+.chat1{
+  height: 10%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid lightgrey;
+}
+.chat1 img{
+  height: 50px;
+  width: 15%;
+  margin: 5px 20px;
+  border-radius: 100%;
+}
+
+.chat1 p{
+  color: grey;
+}
+.nome{
+  width: 15%;
+}
+.ultimo_accesso{
+  margin-left: 90px;
+}
+.ultimo_accesso p{
+  font-size: 12px;
+}
+.right{
+  height: 100%;
+  background-color: white;
+}
+.chat_attiva{
+  display: flex;
+  justify-content: space-between;
+  height: 9%;
+  width: 52%;
+  background-color: lightgrey;
+  position: fixed;
+}
+.info_contatto{
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.info_contatto img{
+  width: 16%;
+  border-radius: 100%;
+  margin:  10px;
+  height: 90%;
+}
+.info_contatto p{
+  color: grey;
+  font-weight: 600;
+  margin-top: 3px;
+}
+.impostazioni_contatto{
+  display: flex;
+  align-items: center;
+  width: 15%;
+  justify-content: space-around;
+  padding-right: 10px;
+}
+
+.messaggi{
+  display: inline-block;
+  width: 100%;
+  margin-top: 15%;
+}
+.messaggi p{
+  font-size: 20px;
+  color: black;
+}
+.messaggi_inviati{
+  width: 40%;
+  min-height: 50px;
+  border-radius: 15px;
+  display: block;
+  float: right;
+  clear: both;
+  text-align: center;
+  background-color: green;
+  margin-right:40px;
+  padding: 10px;
+}
+.messaggi_ricevuti{
+  width: 40%;
+  min-height: 50px;
+  border-radius: 15px;
+  display: block;
+  float: left;
+  clear: both;
+  text-align: center;
+  background-color: grey;
+  margin-left: 40px;
+  padding: 10px;
+}
+.messaggi p{
+  font-size: 15px;
 }

@@ -1,0 +1,112 @@
+
+*{
+  padding: 0;
+  margin: 0;box-sizing: border-box;
+}
+.high-bar{
+  height: 20vh;
+  width: 100%;
+  background-color: blue;
+}
+#app{
+  width: 80%;
+  height: 90vh;
+  margin-left: 10%;
+  margin-top: 5vh;
+  border: 1px solid red;
+  position: absolute;
+  display: flex;
+}
+.left{
+  width: 35%;
+  border: 1px solid red;
+  background-color: white;
+}
+.right{
+  width: 65%;
+  border: 1px solid red;
+}
+header{
+  border: 1px solid red;
+  height: 10%;
+  display: flex;
+  background-color: lightgrey;
+}
+.foto{
+  border: 1px solid red;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+.impostazioni{
+  border: 1px solid red;
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+}
+.foto img{
+  width: 30%;
+  height: 100%;
+}
+.foto h1{
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+.impostazioni i{
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 5px;
+}
+.notifiche{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 15%;
+  background-color: #6495ED;
+}
+.notifiche i{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #6495ED;
+  border-radius: 100%;
+  background-color: white;
+}
+.notifiche h1{
+  font-size: 16px;
+}
+.notifiche a{
+  font-size: 14px;
+  color: blue;
+}
+.search{
+  display: flex;
+  height: 8%;
+}
+.search h1{
+  font-size: 13px;
+  color: grey;
+  margin-left: 20px;
+}
+.search_box{
+  border: 1px solid lightgrey;
+  width: 94%;
+  height: 70%;
+  margin-left: 3%;
+  margin-top: 2%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+.search i{
+  margin-left: 10px;
+}

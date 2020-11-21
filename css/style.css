@@ -1,8 +1,9 @@
 
+/*  REGOLE GENERALI   */
 *{
   padding: 0;
   margin: 0;box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: Arial, sans-serif;
 }
 body{
   overflow: hidden;
@@ -18,6 +19,11 @@ p{
   font-size: 12px;
   color: lightgrey;
 }
+a{
+  text-decoration: none;
+}
+
+/*   COLORI SFONDO   */
 .high-bar{
   height: 20vh;
   width: 100%;
@@ -29,6 +35,8 @@ p{
   background-color: lightgrey;
   height: 100vh;
 }
+
+/*   CONTAINER WEB APP   */
 #app{
   width: 80%;
   height: 90vh;
@@ -44,10 +52,12 @@ p{
 .right{
   width: 65%;
 }
+
+/*   PARTE SINISTRA WEB APP */
 header{
   height: 10%;
   display: flex;
-  background-color: lightgrey;
+  background-color:	#EEE5DE;
   border-right: 1px solid grey;
 }
 .foto{
@@ -71,18 +81,20 @@ header{
   display: flex;
   align-items: center;
 }
-.impostazioni i{
+.impostazioni a{
   display: flex;
   align-items: center;
   justify-content: flex-end;
   padding-right: 15px;
 }
+
+/*   NOTIFICHE */
 .notifiche{
   display: flex;
   justify-content: flex-start;
   align-items: center;
   height: 15%;
-  background-color: #6495ED;
+  background-color: #40E0D0;
 }
 .notifiche i{
   display: flex;
@@ -96,14 +108,20 @@ header{
   border-radius: 100%;
   background-color: white;
 }
-
 .notifiche a{
   font-size: 12px;
   color: blue;
 }
+.notifiche a:nth-child(2){
+  text-decoration: underline;
+}
+
+/*   SEARCH   */
 .search{
   display: flex;
   height: 8%;
+  margin-bottom: 5px;
+  background-color: 	#EEE5DE;
 }
 .search h2{
   color: grey;
@@ -115,12 +133,12 @@ header{
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  border: 1px solid lightgrey;
-  width: 90%;
-  margin-left: 5%;
+  width: 94%;
+  margin-left: 3%;
   height: 70%;
-  margin-top: 3%;
-  border-radius: 5px;
+  margin-top: 2%;
+  border-radius: 7px;
+  background-color: white;
 }
 .search_box input{
   border: 0px;
@@ -132,17 +150,18 @@ header{
 .search i{
   margin-left: 10px;
 }
+
+/*   TUTTE LE CHAT   */
 .chat{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   overflow-y: scroll;
-  max-height: 60vh;
+  max-height: 59vh;
   transition: all;
   scrollbar-width: none;
-
 }
-.chat::-webkit-scrollbar { /* WebKit */
+.chat::-webkit-scrollbar {
     width: 0;
     height: 0;
 }
@@ -150,7 +169,7 @@ header{
   background-color: lightgrey;
   opacity: 0.9;
 }
-.chat1{
+.anteprima_chat{
   height: 10%;
   display: flex;
   justify-content: flex-start;
@@ -163,31 +182,9 @@ header{
   margin: 5px 20px;
   border-radius: 100%;
 }
-
 .chat p{
   color: grey;
-}
-
-.chat2{
-  height: 10%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  border-bottom: 1px solid lightgrey;
-}
-.chat3{
-  height: 10%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  border-bottom: 1px solid lightgrey;
-}
-.chat4{
-  height: 10%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  border-bottom: 1px solid lightgrey;
+  margin-top: 5px;
 }
 .nome{
   width: 15%;
@@ -199,9 +196,7 @@ header{
   font-size: 12px;
 }
 
-
-
-/*  parte destra */
+/*  PARTE DESTRA WEB APP */
 .right{
   height: 100%;
   background-image: url(../img/mine.jpg);
@@ -211,7 +206,7 @@ header{
   justify-content: space-between;
   height: 9%;
   width: 52%;
-  background-color: lightgrey;
+  background-color:#EEE5DE;
   position: fixed;
 }
 .info_contatto{
@@ -239,6 +234,7 @@ header{
   padding-right: 10px;
 }
 
+/*   MESSAGGI CHAT ATTIVA */
 .messaggi{
   display: inline-block;
   width: 100%;
@@ -252,7 +248,6 @@ header{
   width: 0;
   height: 0;
 }
-
 .messaggi p{
   font-size: 20px;
   color: black;
@@ -287,6 +282,8 @@ header{
 .messaggi p{
   font-size: 15px;
 }
+
+/*   INPUT INVIO MESSAGGI */
 .send_message{
   height: 10%;
   width: 52%;
@@ -295,7 +292,7 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
+  background-color: #EEE5DE;
 }
 .emoji{
   width: 10%;
@@ -308,10 +305,13 @@ header{
 .send input{
   font-size: 15px;
   color: grey;
+  font-weight:500;
+  background-color: white;
   width: 100%;
   padding: 10px;
   border-radius: 10px;
-  border: 1px solid lightgrey;
+  border: 1px solid white;
+  height: 50px;
 }
 .vocal{
   width: 10%;

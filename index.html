@@ -7,12 +7,14 @@
           crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <title></title>
+    <title>Boolzapp</title>
   </head>
   <body>
     <div class="container">
       <div class="high-bar">
       <div id="app">
+
+        <!--    INIZIO PARTE SINISTRA WEB APP   -->
         <div class="left">
           <header>
             <div class="foto">
@@ -20,26 +22,32 @@
               <h1>Nome Utente</h1>
             </div>
             <div class="impostazioni">
-              <i class="fas fa-circle-notch"></i>
-              <i class="fas fa-comment-alt"></i>
-              <i class="fas fa-ellipsis-v"></i>
+              <a href="#"><i class="fas fa-circle-notch"></i></a>
+              <a href="#"><i class="fas fa-comment-alt"></i></a>
+              <a href="#"><i class="fas fa-ellipsis-v"></i></a>
             </div>
           </header>
+
+          <!--   NOTIFICHE   -->
           <div class="notifiche">
-            <i class="far fa-bell-slash"></i>
+            <a href="#"><i class="far fa-bell-slash"></i></a>
             <div class="notifiche_testo">
               <h1>Ricevi notifiche di nuovi messaggi</h1>
               <a href="#">Attiva nuove notifiche desktop</a>
             </div>
           </div>
+
+          <!--   SEARCH   -->
           <div class="search">
             <div class="search_box">
-              <i class="fas fa-search"></i>
+              <a href="#"> <i class="fas fa-search"></i></a>
               <input type="text" name="" value="" placeholder="Cerca o inizia una nuova chat">
             </div>
           </div>
+
+          <!--   TUTTE LE CHAT   -->
           <div class="chat">
-            <div class="chat1">
+            <div class="anteprima_chat">
               <img src="img/avatar_2.jpg" alt="">
               <div class="nome">
                 <h1>Michele</h1>
@@ -49,7 +57,7 @@
                 <p>20 11 2020 10:52:38</p>
               </div>
             </div>
-            <div class="chat2">
+            <div class="anteprima_chat">
               <img src="img/avatar_3.jpg" alt="">
               <div class="nome">
                 <h1>Fabio</h1>
@@ -59,7 +67,7 @@
                 <p>20 11 2020 10:52:38</p>
               </div>
             </div>
-            <div class="chat3">
+            <div class="anteprima_chat">
               <img src="img/avatar_4.jpg" alt="">
               <div class="nome">
                 <h1>Samuele</h1>
@@ -69,8 +77,18 @@
                 <p>20 11 2020 10:52:38</p>
               </div>
             </div>
-            <div class="chat4">
+            <div class="anteprima_chat">
               <img src="img/avatar_5.jpg" alt="">
+              <div class="nome">
+                <h1>Paolo</h1>
+                <p>ok</p>
+              </div>
+              <div class="ultimo_accesso">
+                <p>20 11 2020 10:52:38</p>
+              </div>
+            </div>
+            <div class="anteprima_chat">
+              <img src="img/avatar_6.jpg" alt="">
               <div class="nome">
                 <h1>Luisa</h1>
                 <p>ok</p>
@@ -79,23 +97,47 @@
                 <p>20 11 2020 10:52:38</p>
               </div>
             </div>
+            <div class="anteprima_chat">
+              <img src="img/avatar_7.jpg" alt="">
+              <div class="nome">
+                <h1>Mario</h1>
+                <p>ok</p>
+              </div>
+              <div class="ultimo_accesso">
+                <p>20 11 2020 10:52:38</p>
+              </div>
+            </div>
+            <div class="anteprima_chat">
+              <img src="img/avatar_8.jpg" alt="">
+              <div class="nome">
+                <h1>Luigi</h1>
+                <p>ok</p>
+              </div>
+              <div class="ultimo_accesso">
+                <p>20 11 2020 10:52:38</p>
+              </div>
+            </div>
           </div>
         </div>
+
+        <!--   INIZIO PARTE DESTRA WEB APP -->
         <div class="right">
           <div class="chat_attiva">
             <div class="info_contatto">
               <img src="img/avatar_5.jpg" alt="">
               <div>
-                <h1>Luisa</h1>
+                <h1>Paolo</h1>
                 <p>Ultimo accesso oggi alle 20 11 2020 10:52:38</p>
               </div>
             </div>
             <div class="impostazioni_contatto">
-              <i class="fas fa-search"></i>
-              <i class="fas fa-paperclip"></i>
-              <i class="fas fa-ellipsis-v"></i>
+              <a href="#"><i class="fas fa-search"></i></a>
+              <a href="#"><i class="fas fa-paperclip"></i></a>
+              <a href="#"><i class="fas fa-ellipsis-v"></i></a>
             </div>
           </div>
+
+          <!--   MESSAGGI CHAT ATTIVA -->
           <div class="messaggi">
             <div class="messaggi_inviati">
               <p>Lo sai che ho aperto una nuova pizzeria?</p>
@@ -110,15 +152,17 @@
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
             </div>
           </div>
+
+          <!--   INPUT INVIO MESSAGGIO -->
           <div class="send_message">
             <div class="emoji">
-              <i class="far fa-laugh"></i>
+              <a href="#"><i class="far fa-laugh"></i></a>
             </div>
             <div class="send">
               <input type="text" name="" value="" placeholder="Scrivi un messaggio">
             </div>
             <div class="vocal">
-              <i class="fas fa-microphone"></i>
+              <a href="#"><i class="fas fa-microphone"></i></a>
             </div>
           </div>
         </div>

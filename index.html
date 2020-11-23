@@ -47,15 +47,15 @@
           </div>
 
           <!--   TUTTE LE CHAT   -->
-          <div class="chat" v-for="(chat, i) in chat">
+          <div class="chat" v-for="(element, i) in chat" >
             <div class="anteprima_chat">
-              <img :src="chat.immagine" alt="">
+              <img :src="element.immagine" alt="">
               <div class="nome">
-                <h1>{{chat.nome}}</h1>
-                <p>{{chat.testo}}</p>
+                <h1>{{element.nome}}</h1>
+                <p>{{element.testo}}</p>
               </div>
               <div class="ultimo_accesso">
-                <p>{{chat.ultimo_accesso}}</p>
+                <p>{{element.ultimo_accesso}}</p>
               </div>
             </div>
           </div>
@@ -63,12 +63,12 @@
 
         <!--   INIZIO PARTE DESTRA WEB APP -->
         <div class="right">
-          <div class="chat_attiva">
+          <div class="chat_attiva" v-for="(element, i) in chat">
             <div class="info_contatto">
-              <img src="img/avatar_5.jpg" alt="">
+              <img :src="element.immagine" alt="">
               <div>
-                <h1>Paolo</h1>
-                <p>Ultimo accesso oggi alle 20 11 2020 10:52:38</p>
+                <h1>{{element.nome}}</h1>
+                <p>Ultimo accesso oggi alle {{element.ultimo_accesso}}</p>
               </div>
             </div>
             <div class="impostazioni_contatto">
@@ -79,18 +79,18 @@
           </div>
 
           <!--   MESSAGGI CHAT ATTIVA -->
-          <div class="messaggi">
+          <div class="messaggi" v-for="(element, i) in chat">
             <div class="messaggi_inviati">
-              <p>Lo sai che ho aperto una nuova pizzeria?</p>
+              {{messaggi.text}}
             </div>
             <div class="messaggi_ricevuti">
-              <p>Si, ma preferirei andare al cinema</p>
+              <p></p>
             </div>
             <div class="messaggi_inviati">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <p></p>
             </div>
             <div class="messaggi_ricevuti">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+              <p> </p>
             </div>
           </div>
 

@@ -18,16 +18,27 @@ var app = new Vue({
         ultimo_accesso:"20 11 2020 13:52:38",
         messaggi: [
           {
-            text_send: "Lo sai che ho aperto una nuova pizzeria?"
+            type: 'send',
+            text: "Lo sai che ho aperto una nuova pizzeria?",
+            time: 'oggi alle 22.36'
           },
           {
-            text_rec : "Si, ma preferirei andare al cinema"
+            type: 'rec',
+            text : "Si, ma preferirei andare al cinema",
+            time: 'oggi alle 22.35'
+
           },
           {
-            text_send : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            type: 'send',
+            text : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            time: 'oggi alle 22.34'
+
           },
           {
-            text_rec : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            type: 'rec',
+            text : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            time: 'oggi alle 22.33'
+
           }
         ]
       },
@@ -40,13 +51,19 @@ var app = new Vue({
         ultimo_accesso:"20 11 2020 10:55:38",
         messaggi: [
           {
-            text_send: "Ciao come stai?"
+            type: 'send',
+            text: "Ciao come stai?",
+            time: 'oggi alle 22.34'
           },
           {
-            text_rec : "Bene te?"
+            type: 'rec',
+            text : "Bene te?",
+            time: 'oggi alle 22.34'
           },
           {
-            text_send : "Bene"
+            type: 'send',
+            text : "Bene",
+            time: 'oggi alle 22.34'
           }
         ]
       },
@@ -59,10 +76,14 @@ var app = new Vue({
         ultimo_accesso:"20 11 2020 09:12:28",
         messaggi: [
           {
-            text_send: "Hei"
+            type: 'send',
+            text: "Hei",
+            time: 'oggi alle 22.34'
           },
           {
-            text_rec : "Hei"
+            type: 'rec',
+            text : "Hei",
+            time: 'oggi alle 22.34'
           },
         ]
       },
@@ -76,10 +97,14 @@ var app = new Vue({
         ultimo_accesso:"20 11 2020 08:32:38",
         messaggi: [
           {
-            text_rec: "Ciao"
+            type: 'rec',
+            text: "Ciao",
+            time: 'oggi alle 22.34'
           },
           {
-            text_send : "Ciao"
+            type: 'send',
+            text : "Ciao",
+            time: 'oggi alle 22.34'
           }
         ]
       }

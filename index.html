@@ -63,12 +63,12 @@
 
         <!--   INIZIO PARTE DESTRA WEB APP -->
         <div class="right">
-          <div class="chat_attiva" v-for="(element, i) in chat">
+          <div class="chat_attiva" v-for="(element, i) in chat[active]">
             <div class="info_contatto">
-              <img :src="element.immagine" alt="">
+              <img :src="chat[active].immagine" alt="">
               <div>
-                <h1>{{element.nome}}</h1>
-                <p>Ultimo accesso oggi alle {{element.ultimo_accesso}}</p>
+                <h1>{{chat[active].nome}}</h1>
+                <p>Ultimo accesso oggi alle {{chat[active].ultimo_accesso}}</p>
               </div>
             </div>
             <div class="impostazioni_contatto">
@@ -79,19 +79,14 @@
           </div>
 
           <!--   MESSAGGI CHAT ATTIVA -->
-          <div class="messaggi" v-for="(element, i) in chat">
-            <div class="messaggi_inviati">
-              {{element.text_send}}
+          <div class="messaggi" >
+            <div v-for="(element, i) in chat[active].messaggi" :class="(element.type === 'send')?'messaggi_inviati' : 'messaggi_ricevuti' ">
+              {{element.text}}
+            <div class="ora_invio">
+              {{element.time}}
             </div>
-            <div class="messaggi_ricevuti">
-              <p></p>
-            </div>
-            <div class="messaggi_inviati">
-              <p></p>
-            </div>
-            <div class="messaggi_ricevuti">
-              <p> </p>
-            </div>
+          </div>
+
           </div>
 
           <!--   INPUT INVIO MESSAGGIO -->

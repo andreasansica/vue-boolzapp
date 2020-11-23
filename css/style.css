@@ -255,34 +255,39 @@ header{
   color: black;
 }
 .messaggi_inviati{
-  width: 40%;
+  max-width: 50%;
+  min-width: 30%;
   min-height: 50px;
   border-radius: 15px;
-  display: block;
   float: right;
   clear: both;
-  text-align: center;
   background-color: lightgreen;
   margin-right:40px;
   padding: 10px;
   margin-bottom: 40px;
+  text-align: left;
 }
 .messaggi_ricevuti{
-  width: 40%;
+  max-width: 40%;
+  min-width: 30%;
   min-height: 50px;
   border-radius: 15px;
-  display: block;
   float: left;
   clear: both;
-  text-align: center;
   background-color: white;
   margin-left: 40px;
   padding: 10px;
   margin-bottom: 40px;
-
+  text-align: left;
 }
 .messaggi p{
   font-size: 15px;
+}
+.ora_invio{
+  color: grey;
+  font-size: 12px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 /*   INPUT INVIO MESSAGGI */

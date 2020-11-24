@@ -79,7 +79,7 @@
           </div>
 
           <!--   MESSAGGI CHAT ATTIVA -->
-          <div class="messaggi" >
+          <div class="messaggi" id="mex">
             <div v-for="(element, i) in chat[active].messaggi" :class="(element.type === 'send')?'messaggi_inviati' : 'messaggi_ricevuti' ">
               {{element.text}}
               <div class="ora_invio">

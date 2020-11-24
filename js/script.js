@@ -158,3 +158,11 @@ var app = new Vue({
 
   }
 })
+
+
+
+function updateScroll(){
+    var element = document.getElementById("mex");
+    element.scrollTop = element.scrollHeight;
+}
+setInterval(updateScroll,0);

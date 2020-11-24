@@ -48,7 +48,7 @@
 
           <!--   TUTTE LE CHAT   -->
           <div class="chat" v-for="(element, i) in chat" @click="chatActive(i)" >
-            <div class="anteprima_chat">
+            <div class="anteprima_chat" :class="{attivo: i === active}">
               <img :src="element.immagine" alt="">
               <div class="nome">
                 <h1>{{element.nome}}</h1>

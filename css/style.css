@@ -123,7 +123,6 @@ header{
   display: flex;
   height: 50px;
   width: 100%;
-  margin-bottom: 5px;
   background-color: 	#EEE5DE;
   overflow: hidden;
 }
@@ -176,6 +175,14 @@ header{
   justify-content: flex-start;
   align-items: center;
   border-bottom: 1px solid lightgrey;
+  transition: all;
+}
+.anteprima_chat:hover{
+  cursor: pointer;
+}
+.attivo{
+  background-color: lightgrey;
+  opacity: 0.8;
 }
 .chat img{
   height: 50px;

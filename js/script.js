@@ -3,6 +3,7 @@ var app = new Vue({
   el: "#app",
   data:{
     active: 0,
+
     utente:{
       immagine: "img/avatar_5.jpg",
       nome: "Andrea"

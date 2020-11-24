@@ -8,10 +8,10 @@
 
 i{
   color: grey;
-  font-size: 20px;
+  font-size: 18px;
 }
 h1{
-  font-size: 16px;
+  font-size: 15px;
 }
 p{
   font-size: 12px;
@@ -156,11 +156,9 @@ header{
 }
 
 /*   TUTTE LE CHAT   */
+
 .chat{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  overflow: auto;
+  overflow: scroll;
   max-height: 400px;
   scrollbar-width: none;
 }
@@ -258,7 +256,7 @@ header{
   height: 0;
 }
 .messaggi p{
-  font-size: 20px;
+  font-size: 15px;
   color: black;
 }
 .messaggi_inviati{
@@ -273,6 +271,7 @@ header{
   padding: 10px;
   margin-bottom: 40px;
   text-align: left;
+  font-size: 15px;
 }
 .messaggi_ricevuti{
   max-width: 40%;
@@ -286,6 +285,7 @@ header{
   padding: 10px;
   margin-bottom: 40px;
   text-align: left;
+  font-size: 15px;
 }
 .messaggi p{
   font-size: 15px;
@@ -296,7 +296,20 @@ header{
   display: flex;
   justify-content: flex-end;
 }
-
+.new_message{
+  max-width: 50%;
+  min-width: 30%;
+  min-height: 50px;
+  border-radius: 15px;
+  float: right;
+  clear: both;
+  background-color: lightgreen;
+  margin-right:40px;
+  padding: 10px;
+  margin-bottom: 40px;
+  text-align: left;
+  font-size: 15px;
+}
 /*   INPUT INVIO MESSAGGI */
 .send_message{
   height: 50px;
@@ -331,4 +344,76 @@ header{
   width: 10%;
   display: flex;
   justify-content: center;
+}
+
+
+
+/*   MEDIA QUERY   */
+
+@media screen and (max-width: 1000px) {
+  h1 {
+    font-size: 15px;
+  }
+  p{
+    font-size: 10px;
+  }
+  i{
+    font-size: 15px;
+  }
+  .messaggi_inviati{
+    font-size: 15px;
+  }
+  .messaggi_ricevuti{
+    font-size: 15px;
+  }
+}
+
+
+@media screen and (max-width: 850px) {
+  h1 {
+    font-size: 12px;
+  }
+  p{
+    font-size: 10px;
+  }
+  i{
+    font-size: 14px;
+  }
+  .notifiche a{
+    font-size: 10px;
+  }
+  .search input{
+    font-size: 12px;
+  }
+  .ultimo_accesso {
+    margin-left: 70px;
+    overflow: hidden;
+  }
+  .ultimo_accesso p{
+    font-size: 10px;
+  }
+  .messaggi_inviati{
+    font-size: 12px;
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+  .messaggi_ricevuti{
+    font-size: 12px;
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+  .foto img{
+    margin-top: 10px;
+  }
+  .left img{
+    height: 40px;
+    width: 40px;
+  }
+  .chat_attiva img{
+    height: 40px;
+    width: 40px;
+  }
+  .send input{
+    height: 40px;
+  }
 }

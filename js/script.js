@@ -2,13 +2,17 @@
 var app = new Vue({
   el: "#app",
   data:{
-    active: 0,
 
+    //   CONTATORE
+    active: 0,
+    messaggioInserito : "",
+    //  UTENTE PROFILO
     utente:{
       immagine: "img/avatar_5.jpg",
       nome: "Andrea"
     },
 
+    //   TUTTE LE CHAT CON I MESSAGGI
     chat:[
 
       // PRIMA CHAT
@@ -27,19 +31,16 @@ var app = new Vue({
             type: 'rec',
             text : "Si, ma preferirei andare al cinema",
             time: 'oggi alle 22.35'
-
           },
           {
             type: 'send',
             text : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
             time: 'oggi alle 22.34'
-
           },
           {
             type: 'rec',
             text : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             time: 'oggi alle 22.33'
-
           }
         ]
       },
@@ -111,11 +112,49 @@ var app = new Vue({
       }
     ]
   },
+
+  //   FUNZIONE PER CAMBIO CHAT AL CLICK
   methods:{
     chatActive : function(i){
       this.active = i
-    }
+    },
+
+    //   INVIO MESSAGGIO
+    addMessage : function(){
+      this.chat[this.active].messaggi.push(
+        {
+          text:this.messaggioInserito,
+          type: 'send',
+          time: this.orario(),
+        }
+      ),
+      this.messaggioInserito = "",
+
+      //   RISPOSTA AUTOMATICA MESSAGGIO DOPO 1 SECONDOs
+      setTimeout(() => {
+        this.chat[this.active].messaggi.push(
+          {
+            text: 'ok',
+            type: 'rec',
+            time: this.orario()
+          }
+        )
+
+        //  CAMBIO ORA ULTIMO ACCESSO
+        this.chat[this.active].ultimo_accesso = this.orario()
+      } ,1000)
+    },
+
+    //   METTO L'ORARIO ATTUALE
+    orario: function() {
+      let today = new Date();
+      let ora = today.getHours();
+      let minuti = today.getMinutes();
+      if(minuti < 10) minuti="0"+minuti;
+      if(ora <10) ora="0"+ora;
+      let data = `oggi alle ${ora}:${minuti}`;
+      return data;
+    },
+
   }
-
-
 })

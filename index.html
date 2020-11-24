@@ -68,7 +68,7 @@
               <img :src="chat[active].immagine" alt="">
               <div>
                 <h1>{{chat[active].nome}}</h1>
-                <p>Ultimo accesso oggi alle {{chat[active].ultimo_accesso}}</p>
+                <p>Ultimo accesso il {{chat[active].ultimo_accesso}}</p>
               </div>
             </div>
             <div class="impostazioni_contatto">
@@ -82,23 +82,22 @@
           <div class="messaggi" >
             <div v-for="(element, i) in chat[active].messaggi" :class="(element.type === 'send')?'messaggi_inviati' : 'messaggi_ricevuti' ">
               {{element.text}}
-            <div class="ora_invio">
-              {{element.time}}
+              <div class="ora_invio">
+                {{element.time}}
+              </div>
             </div>
           </div>
 
-          </div>
-
           <!--   INPUT INVIO MESSAGGIO -->
-          <div class="send_message">
+          <div class="send_message" v-for="(element, i) in chat[active].messaggi">
             <div class="emoji">
               <a href="#"><i class="far fa-laugh"></i></a>
             </div>
             <div class="send">
-              <input type="text" name="" value="" placeholder="Scrivi un messaggio">
+              <input type="text" name="" value="" placeholder="Scrivi un messaggio" @keyup.enter="addMessage" v-model="messaggioInserito">
             </div>
             <div class="vocal">
-              <a href="#"><i class="fas fa-microphone"></i></a>
+              <a href="#"><i class="fas fa-microphone" @click="addMessage"></i></a>
             </div>
           </div>
         </div>

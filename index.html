@@ -42,17 +42,17 @@
           <div class="search">
             <div class="search_box">
               <a href="#"> <i class="fas fa-search"></i></a>
-              <input type="text" name="" value="" placeholder="Cerca o inizia una nuova chat">
+              <input type="text" name="" value="" placeholder="Cerca o inizia una nuova chat" v-model="searchChat" @keyup="cercaChat()">
             </div>
           </div>
 
           <!--   TUTTE LE CHAT   -->
-          <div class="chat" v-for="(element, i) in chat" @click="chatActive(i)" >
-            <div class="anteprima_chat" :class="{attivo: i === active}">
+          <div class="chat" v-for="(element, i) in chat" v-if="element.visibile === true" @click="chatActive(i)" >
+            <div class="anteprima_chat" :class="{attivo: i === active}" >
               <img :src="element.immagine" alt="">
               <div class="nome">
                 <h1>{{element.nome}}</h1>
-                <p>{{element.testo}}</p>
+                <p>{{element.messaggi[element.messaggi.length -1].text}}</p>
               </div>
               <div class="ultimo_accesso">
                 <p>{{element.ultimo_accesso}}</p>
@@ -68,7 +68,7 @@
               <img :src="chat[active].immagine" alt="">
               <div>
                 <h1>{{chat[active].nome}}</h1>
-                <p>Ultimo accesso il {{chat[active].ultimo_accesso}}</p>
+                <p>Ultimo accesso {{chat[active].ultimo_accesso}}</p>
               </div>
             </div>
             <div class="impostazioni_contatto">
@@ -79,7 +79,7 @@
           </div>
 
           <!--   MESSAGGI CHAT ATTIVA -->
-          <div class="messaggi" id="mex">
+          <div class="messaggi">
             <div v-for="(element, i) in chat[active].messaggi" :class="(element.type === 'send')?'messaggi_inviati' : 'messaggi_ricevuti' ">
               {{element.text}}
               <div class="ora_invio">

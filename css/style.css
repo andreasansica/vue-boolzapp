@@ -5,7 +5,6 @@
   margin: 0;box-sizing: border-box;
   font-family: 'Inter', sans-serif;
 }
-
 i{
   color: grey;
   font-size: 18px;
@@ -34,6 +33,7 @@ a{
   height: 100vh;
 }
 
+
 /*   CONTAINER WEB APP   */
 #app{
   width: 80%;
@@ -46,7 +46,8 @@ a{
 .left{
   width: 35%;
   background-color: white;
-  overflow: hidden;
+  overflow: auto;
+  scrollbar-width: none;
 }
 .right{
   width: 65%;
@@ -59,7 +60,6 @@ header{
   display: flex;
   background-color:	#EEE5DE;
   border-right: 1px solid grey;
-  overflow: hidden;
 }
 .foto{
   width: 60%;
@@ -166,9 +166,7 @@ header{
     width: 0;
     height: 0;
 }
-
 .anteprima_chat{
-  height: 10%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -194,6 +192,13 @@ header{
 }
 .nome{
   width: 15%;
+}
+.nome p{
+  width: 120px;
+  height: 15px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .ultimo_accesso{
   margin-left: 90px;
@@ -242,7 +247,6 @@ header{
 }
 
 /*   MESSAGGI CHAT ATTIVA */
-
 .messaggi{
   display: inline-block;
   width: 100%;
@@ -273,6 +277,7 @@ header{
   margin-bottom: 40px;
   text-align: left;
   font-size: 15px;
+  overflow: hidden;
 }
 .messaggi_ricevuti{
   max-width: 40%;
@@ -287,6 +292,7 @@ header{
   margin-bottom: 40px;
   text-align: left;
   font-size: 15px;
+  overflow: hidden;
 }
 .messaggi p{
   font-size: 15px;
@@ -311,6 +317,7 @@ header{
   text-align: left;
   font-size: 15px;
 }
+
 /*   INPUT INVIO MESSAGGI */
 .send_message{
   height: 50px;

@@ -82,8 +82,8 @@
           <div class="messaggi">
             <div v-for="(element, i) in chat[active].messaggi" :class="(element.type === 'send')?'messaggi_inviati' : 'messaggi_ricevuti' " >
               {{element.text}}
-              <i class="fas fa-chevron-down" @click="showDrop(i)">
-                <div class="dropdown" :class="{dropOn: element.dropdown}" @mouseleave="showDrop(i)">
+              <i class="fas fa-chevron-down" @click="showDrop(i)" >
+                <div class="dropdown" :class="{dropOn: element.dropdown}" @mouseleave="showDrop(i)" >
                   <p @click="cancellaMessaggio(i)">Elimina messaggio</p>
                 </div>
               </i>

@@ -299,13 +299,7 @@ header{
 }
 .dropdown {
     display: none;
-    position: absolute;
-    height: 60px;
-    width: 170px;
-    background-color: white;
-    border-radius: 10px;
-    border: 1px solid lightgrey;
-    margin-top: -40px;
+
 }
 .dropdown p{
   color: black;
@@ -316,6 +310,13 @@ header{
 }
 .dropOn {
     display: block;
+    position: absolute;
+    height: 60px;
+    width: 170px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid lightgrey;
+    margin-top: -40px;
 }
 .dropdown > p:hover {
     cursor: pointer;

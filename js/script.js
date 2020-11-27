@@ -133,9 +133,9 @@ var app = new Vue({
     },
 
 
-  //   FUNZIONE PER CAMBIO CHAT AL CLICK
   methods:{
 
+    //   FUNZIONE PER CAMBIO CHAT AL CLICK
     chatActive : function(i){
       this.active = i
     },
@@ -151,6 +151,7 @@ var app = new Vue({
             text: this.messaggioInserito,
             type: 'send',
             time: this.orario(),
+            dropdown:false
           }
         )
       }
@@ -163,7 +164,8 @@ var app = new Vue({
           {
             text: 'ok',
             type: 'rec',
-            time: this.orario()
+            time: this.orario(),
+            dropdown:false
           }
         )
 
@@ -198,8 +200,8 @@ var app = new Vue({
         })
       },
 
-      //   FUNZIONE PER MOSTRARE DROPDOWN
 
+      //   FUNZIONE PER MOSTRARE DROPDOWN
       showDrop: function(i) {
            if (this.chat[this.active].messaggi[i].dropdown === false) {
                this.chat[this.active].messaggi[i].dropdown = true;
@@ -208,11 +210,11 @@ var app = new Vue({
            }
        },
 
-    //  FUNZIONE PER ELIMINARE MESSAGGIO
 
-    cancellaMessaggio(i){
-      this.chat[this.active].messaggi.splice(i,1);
-    },
+      //  FUNZIONE PER ELIMINARE MESSAGGIO
+      cancellaMessaggio(i){
+        this.chat[this.active].messaggi.splice(i,1);
+      },
 
 
   }

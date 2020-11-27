@@ -27,22 +27,26 @@ var app = new Vue({
           {
             type: 'send',
             text: "Lo sai che ho aperto una nuova pizzeria?",
-            time: 'oggi alle 22.36'
+            time: 'oggi alle 22.36',
+            dropdown:false
           },
           {
             type: 'rec',
             text : "Si, ma preferirei andare al cinema",
-            time: 'oggi alle 22.35'
+            time: 'oggi alle 22.35',
+            dropdown:false
           },
           {
             type: 'send',
             text : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-            time: 'oggi alle 22.34'
+            time: 'oggi alle 22.34',
+            dropdown:false
           },
           {
             type: 'rec',
             text : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            time: 'oggi alle 22.33'
+            time: 'oggi alle 22.33',
+            dropdown:false
           }
         ],
       },
@@ -57,17 +61,20 @@ var app = new Vue({
           {
             type: 'send',
             text: "Ciao come stai?",
-            time: 'oggi alle 22.34'
+            time: 'oggi alle 22.34',
+            dropdown:false
           },
           {
             type: 'rec',
             text : "Bene te?",
-            time: 'oggi alle 22.34'
+            time: 'oggi alle 22.34',
+            dropdown:false
           },
           {
             type: 'send',
             text : "Bene",
-            time: 'oggi alle 22.34'
+            time: 'oggi alle 22.34',
+            dropdown:false
           }
         ],
       },
@@ -82,12 +89,14 @@ var app = new Vue({
           {
             type: 'send',
             text: "Hei",
-            time: 'oggi alle 22.34'
+            time: 'oggi alle 22.34',
+            dropdown:false
           },
           {
             type: 'rec',
             text : "Hei",
-            time: 'oggi alle 22.34'
+            time: 'oggi alle 22.34',
+            dropdown:false
           },
         ],
       },
@@ -103,12 +112,14 @@ var app = new Vue({
           {
             type: 'rec',
             text: "Ciao",
-            time: 'oggi alle 22.34'
+            time: 'oggi alle 22.34',
+            dropdown:false
           },
           {
             type: 'send',
             text : "Ciao",
-            time: 'oggi alle 22.34'
+            time: 'oggi alle 22.34',
+            dropdown:false
           }
         ],
       }
@@ -146,7 +157,7 @@ var app = new Vue({
       this.messaggioInserito = "",
 
 
-      //   RISPOSTA AUTOMATICA MESSAGGIO DOPO 1 SECONDOs
+      //   RISPOSTA AUTOMATICA MESSAGGIO DOPO 1 SECONDO
       setTimeout(() => {
         this.chat[this.active].messaggi.push(
           {
@@ -185,9 +196,23 @@ var app = new Vue({
             element.visibile = false;
           };
         })
-      }
+      },
 
+      //   FUNZIONE PER MOSTRARE DROPDOWN
 
+      showDrop: function(i) {
+           if (this.chat[this.active].messaggi[i].dropdown === false) {
+               this.chat[this.active].messaggi[i].dropdown = true;
+           } else {
+               this.chat[this.active].messaggi[i].dropdown = false;
+           }
+       },
+
+    //  FUNZIONE PER ELIMINARE MESSAGGIO
+
+    cancellaMessaggio(i){
+      this.chat[this.active].messaggi.splice(i,1);
+    },
 
 
   }

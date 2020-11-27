@@ -297,6 +297,34 @@ header{
 .messaggi p{
   font-size: 15px;
 }
+.dropdown {
+    display: none;
+    position: absolute;
+    height: 60px;
+    width: 170px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid lightgrey;
+    margin-top: -40px;
+}
+.dropdown p{
+  color: black;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 10px;
+  margin-top: 10px;
+}
+.dropOn {
+    display: block;
+}
+.dropdown > p:hover {
+    cursor: pointer;
+    font-size: 16px;
+}
+.messaggi  i:hover {
+    cursor:  pointer;
+}
+
 .ora_invio{
   color: grey;
   font-size: 12px;
@@ -317,6 +345,9 @@ header{
   text-align: left;
   font-size: 15px;
 }
+
+
+
 
 /*   INPUT INVIO MESSAGGI */
 .send_message{

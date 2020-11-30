@@ -297,6 +297,9 @@ header{
 .messaggi p{
   font-size: 15px;
 }
+.messaggi i{
+  float: right;
+}
 .dropdown {
     display: none;
 
@@ -306,21 +309,24 @@ header{
   font-weight: 500;
   font-size: 14px;
   padding: 10px;
-  margin-top: 10px;
+  margin-top: 8px;
+  text-align: center;
 }
 .dropOn {
     display: block;
     position: absolute;
-    height: 60px;
-    width: 170px;
+    height: 50px;
+    width: 160px;
     background-color: white;
     border-radius: 10px;
     border: 1px solid lightgrey;
     margin-top: -40px;
 }
+.dropOn:hover{
+  background-color: #C0C0C0;
+}
 .dropdown > p:hover {
     cursor: pointer;
-    font-size: 16px;
 }
 .messaggi  i:hover {
     cursor:  pointer;
